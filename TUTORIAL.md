@@ -63,7 +63,7 @@ gcloud iam service-accounts keys create "sqlserver2dc-credentials.json" \
 Next add Data Catalog admin role to the Service Account.
 ```bash
 gcloud projects add-iam-policy-binding $PROJECT_ID \
---member "serviceAccount:psqlserver2dc-credentials@$PROJECT_ID.iam.gserviceaccount.com" \
+--member "serviceAccount:sqlserver2dc-credentials@$PROJECT_ID.iam.gserviceaccount.com" \
 --quiet \
 --project $PROJECT_ID \
 --role "roles/datacatalog.admin"
